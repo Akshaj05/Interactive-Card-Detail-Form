@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="left">
+        <div class="cards">
+          <div class="front">
+            <img src="images/bg-card-front.png" alt="front" />
+            <div class="card-info">
+              <img
+                class="card_logo"
+                src="images/card-logo.svg"
+                alt="card-logo"
+              />
+              <h1 id="card-number">0000 0000 0000 0000</h1>
+              <div class="holder-info">
+                <span id="name">JANE APPLESEED</span>
+                <span id="expiry">
+                  <span id="month">00</span>
+                  /
+                  <span id="year">00</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="back">
+            <img src="images/bg-card-back.png" alt="back" />
+            <span id="cvc">000</span>
+          </div>
+        </div>
+      </div>
+      <div id="right_sec" class="right">
+        <h1 class="form-info">CARDHOLDER NAME</h1>
+
+        <br />
+        <input
+          type="text"
+          placeholder="e.g. Jane Appleseed"
+          id="name_inpt"
+          class="input-style"
+        />
+        <p id="name_validation" class="error-msg"></p>
+        <h1 class="form-info">CARD NUMBER</h1>
+
+        <br />
+        <input
+          type="text"
+          placeholder="e.g. 1234 5678 9123 0000"
+          id="number_inpt"
+          class="input-style"
+        />
+        <p id="number_validation" class="error-msg"></p>
+        <div class="date-cvc-inpt">
+          <div class="exp_date">
+            <h1 class="form-info">EXP. DATE (MM/YY)</h1>
+            <br />
+            <div class="mm-yy">
+              <div style="display: flex; flex-direction: column">
+                <input
+                  type="number"
+                  placeholder="MM"
+                  id="month_inpt"
+                  class="input-style date-style"
+                />
+                <p id="month_validation" class="error-msg"></p>
+              </div>
+              <div style="display: flex; flex-direction: column">
+                <input
+                  type="number"
+                  placeholder="YY"
+                  id="year_inpt"
+                  class="input-style date-style"
+                />
+                <p id="year_validation" class="error-msg"></p>
+              </div>
+            </div>
+          </div>
+          <div class="cvc">
+            <h1 class="form-info">CVC</h1>
+            <br />
+            <input
+              type="number"
+              placeholder="e.g. 123"
+              id="cvc_inpt"
+              class="input-style"
+            />
+            <p id="cvc_validation" class="error-msg"></p>
+          </div>
+        </div>
+        <button id="sumbit-btn" class="btn" onclick="validation()">
+          Confirm
+        </button>
+      </div>
+      <div id="completed_sec" class="completed">
+        <img src="images/icon-complete.svg" alt="completed-logo" />
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <a class="btn" href="#">Continue</a>
+      </div>
+    </section>
+  </body>
+</html>
